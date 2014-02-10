@@ -15,10 +15,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href='http://fonts.googleapis.com/css?family=Creepster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -37,319 +39,925 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
+					<h1 style="font-size: 1.77em">Travelling Through Pipes and Flying Through the Air;</h1>
+					<h3 style="font-size: 1.11em">the mobile network and the need for Offline
+</h3>
+					<p style="font-size: 0.99em">Natasha Rooney - @thisNatasha</p>
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+				        Hi! I’m Natasha Rooney
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+						Today I’ll be talking about two main topics<br/>
+						- The mobile network<br/>
+						- dealing with this with new web techniques, including offline.
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+					<h2>Why do we care?</h2>
+				    <aside class="notes">
+				    	So why do we, as developers and technologists, care about the mobile network or running web apps offline?!
+				    </aside>
+				</section>
+
+				<section data-state="4pics" data-background="pics/4pics.jpg" style="width:100%; height:100%">
+					<div class="flip-container fragment" id="mario1" style="top:20px;left:40px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/angryright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario2" style="top:20px;right:180px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario3" style="bottom:-20px;left:0px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/angryright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario4" style="bottom:0px;right:150px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/sleepright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+				    <aside class="notes">
+				    	The way we design our web apps in the past meant we didn’t need to care about where the user was. Most likely they would be at home with a reliable connection. Nowadays and with a mobile device in hand they are able to access the web whilst travelling around. Naturally they will want experience the web in the same way when on wifi<br/><br/>
+
+that’s why we care, we want to ensure that at every stage the user still has a good user experience with his favourite web apps. This means we need an understanding of...
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<h2>WiFi</h2>
+				    <aside class="notes">
+				    	wifi
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
+					<h2>Mobile Networks</h2>
+				    <aside class="notes">
+				    	mobile networks
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<h2>And all of these:</h2>
+					<p>HTTP, TCP, HTTPS, TLS, XHR Reqests, HTTP2, UDP...</p>
+				    <aside class="notes">
+				    	and all these others!
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
+					<h3>Mobile Networks</h3>
+					<h3>&</h3>
+					<h3>Dealing with cruddy connetions</h3>
+					<p>(old APIs, new APIs, super cool ultra new APIs)</p>
+				    <aside class="notes">
+				    	But today let’s talk about mobile connections and dealing with the connection from ultra 4g to sod all.
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
+					<div style="margin-top:20px" class="whiteContentBox">
+						<table id="diffenTable" cellspacing="0" title="3G vs. 4G comparison chart" summary="3G versus 4G comparison chart">
+		            <thead>
+		                <tr>
+		                    <th></th>
+		                    <th><h3>3G</h3></th>
+		                    <th><h3>4G</h3></th>
+		                </tr>
+		            </thead>
+		            <tbody><tr><td>Data Throughput</td>                
+		            	<td id="valtd1_1">Up to 3.1Mbps with an average speed range between 0.5 to 1.5 Mbps</td>
+		                <td id="valtd1_2">Practically speaking, 2 to 12 Mbps (Telstra in Australia claims up to 40 Mbps) but potential estimated at a range of 100 to 300 Mbps.</td>
+		                </tr>
+		                <tr id="row2" title="3G vs 4G comparison - Peak Upload Rate"><td>Peak Upload Rate</td>                <td id="valtd2_1">5 Mbps</td>
+		                <td id="valtd2_2">500 Mbps</td>
+		                </tr><tr id="row3" title="3G vs 4G comparison - Peak Download Rate"><td>Peak Download Rate</td>                <td id="valtd3_1">100 Mbps</td>
+		                <td id="valtd3_2">1 Gbps</td>
+		                </tr><tr id="row4" title="3G vs 4G comparison - Switching Technique"><td>Switching Technique</td>                <td id="valtd4_1">packet switching</td>
+		                <td id="valtd4_2">packet switching, message switching</td>
+		                </tr><tr id="row5" title="3G vs 4G comparison - Network Architecture"><td>Network Architecture</td>                <td id="valtd5_1">Wide Area Cell Based</td>
+		                <td id="valtd5_2">Integration of wireless LAN and Wide area.</td>
+		                </tr><tr id="row6" title="3G vs 4G comparison - Services And Applications"><td>Services And Applications</td>                <td id="valtd6_1">CDMA 2000, UMTS, EDGE etc</td>
+		                <td id="valtd6_2">Wimax2 and LTE-Advance</td>
+		                </tr><tr id="row7" title="3G vs 4G comparison - Forward error correction (FEC)"><td>Forward error correction (FEC)</td>                <td id="valtd7_1">3G uses Turbo codes for error correction.</td>
+		                <td id="valtd7_2">Concatenated codes are used for error corrections in 4G.</td>
+		                </tr><tr class="comparisonRow diff lastRow" id="row8" title="3G vs 4G comparison - Frequency Band"><td>Frequency Band</td>                <td id="valtd8_1">1.8 – 2.5 GHz</td>
+		                <td id="valtd8_2">2 – 8 GHz</td>
+		                </tr></tbody></table>
+					</div>
+					<p><small>source: <a href="http://www.diffen.com/difference/3G_vs_4G">http://www.diffen.com/difference/3G_vs_4G</a></small></p>
+				    <aside class="notes">
+				    	- most of you here will have a device capable of up to 3g or 4g speeds<br/>
+- many people get mixed up with LTE and 4G well,<br/>
+- LTE will involve a complete rollout of new hardware and software into the radio and core networks of mobile operators<br/>
+- 4G, doesn’t necessity mean this...
+				    </aside>
 				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
+
+				<section>
+						<h2>4G Requirements</h2>
+						<ul id="requirements4g">
+						<li>All-IP packet switched network</li>
+						<li>Peak data rates: &#60;100&nbsp;Mbit/s (high mobility)</li>
+						<li>Peak data rates: &#60;1&nbsp;Gbit/s (low mobility)</li>
+						<li>Dynamically share network resources</li>
+						<li>Scalable channel bandwidths: 5–20&nbsp;MHz</li>
+						<li>Peak link spectral efficiency: 15 bit/s/Hz (downlink), 6.75 bit/s/Hz (uplink)</li>
+						<li>System spectral efficiency: &#60;3 bit/s/Hz/cell (downlink), 2.25 bit/s/Hz/(indoor usage)</li>
+						<li>Smooth heterogeneous networks handovers</li>
+						<li>Support next generation multimedia.</li>
+						</ul>				
+				    <aside class="notes">
+				    	- the names ‘3g’ and ‘4g’ are both a set of requirements for your device and network connection to meet<br/>
+						- it so happens that 4G requirements line up with the goals of LTE, but some 3G evolutions have also managed to hit these requirements, allowing marketing teams to advertise ‘4G’ without an LTE rollout. LTE rollouts will be deployed in parallel and on a separate spectrum from 3G.<br/><br/>
+
+						But even though 4G is being rolled out we still have two problems:
+				    </aside>
+				</section>
+
+				<section>
+					<h3 style="text-transform:initial;margin-top:25%">1.  I’m not always on 4G</h3>
+					<img style="float:right;" src="pics/lookphoneleft.png">
+				    <aside class="notes">
+					    True, <br/>
+						- luckily  each device holds radios for 2G and 3G (so this is what you see when your 4G signal drops), which is helpful<br/><br/>
+
+						and...
+				    </aside>
+				</section>
+
+				<section>
+					<h3 style="text-transform:initial;margin-top:25%">2.  3G is still the most popular <br/>by a long way</h3>
+					<img style="float:right; margin:-20px 70px 0 0;" src="pics/distractedleft.png">
+				    <aside class="notes">
+				    	And even though 4G is rolling out globally, HSPA+ (3G tech) will be the most dominant of this decade)
+				    </aside>
+				</section>
+
+				<section>
+					<h2>LTE in the UK?</h2>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>93,211 connections</h2>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>3G in the UK?</h2>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>49,013,306 connections</h2>
+					<p style="float:right"><small>source: GSMA Intelligence</small></p>
+				    <aside class="notes">
+				    	so...
+				    </aside>
+				</section>
+
+				<section>
+					<h3 style="margin-top: 200px; text-transform:initial;">Answer: Support Everything!</h3>
+					<p>3G, LTE, 2G, Pigeon (maybe not pigeon)...</p>
+					<div style="float: right; width: 420px; height: 270px; background: url(pics/pigeon.png) bottom center no-repeat;"></div>
+				    <aside class="notes">
+				    	- LTE and HSPA+ are growing fast, but you still need to support everything<br/>
+						- and this isn’t the same as supporting wifi.<br/><br/>
+
+						So, understanding the network and it's latencies will help us achieve this.
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>The Network</h2>
+					<img src="pics/network.png"/>
+					</div>
+				    <aside class="notes">
+				    	Well, this is a network, the basic version. <br/><br/>
+
+						RAN: towers and tracking areas<br/>
+						Core Network: connects RAN to the net <br/>
+						External Network: The internet! <br/>
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Radio Resource Controller</h2>
+					<img src="pics/networkrrc.png"/>
+					</div>
+				    <aside class="notes">				    	
+						Inside the RAN (and located at different points depending on the ‘G’) lives the Radio Resource Controller. <br/>
+						- The RCC controls all the connections between the device and the network<br/>
+						- it allocates bandwidth, power state of the radio, scheduling (who connected when) etc.<br/>
+						- power state because the radio eats battery!<br/>
+						- therefore it impacts latency<br/><br/>
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Radio Resource Controller</h2>
+					<img src="pics/networkrrc3g.png"/>
+					</div>
+				    <aside class="notes">			    	
+						Wifi doesn’t use this method as there are smaller number of users is a much more confined area. You’ll notice how wifi suffers as soon as there are too many users, this is due to high collision rates. <br/><br/>
+
+						But what happened when we make a request? <br/><br/><br/><br/>
+
+
+						[TEXT FROM BOOK]
+						Wifi is different “can transmit at any point, but due to the use of the shared radio medium can also lead to high collision rates and unpredictable performance if there are many active users. Further, because any WiFi peer could start transmitting at any time, all others must also be ready to receive. The radio is always on, which consumes a lot of power.”  
+
+						3G and 4G: The Radio Resource Controller (RRC) mediates all connection management between the device in use. The RRC has direct impact on latency, throughput, and battery life of the device in use.
+						As the name implies, the Radio Resource Controller assumes full responsibility over scheduling of who talks when, allocated bandwidth, the signal power used, the power state of each device, and a dozen other variables. Simply put, the RRC is the brains of the radio access network. Want to send
+						controlled by the network 
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step1.png"/>
+					</div>
+				    <aside class="notes">
+				    	Hold on this may take a while!<br/>
+						STSPE[i]PSM<br/><br/>
+
+						SYNC / RRC - Lets imagine the phone is in an idle state, the radio will first synchronise with the nearest radio tower, and and request a new context to be established.<br/>
+						- LTE - requires several round trips, up to 100 ms<br/>
+						- OLDER - RRC on the serving gateway inside the core network, so this could take seconds!<br/>
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step2.png"/>
+					</div>
+				    <aside class="notes">
+				    	TRANSMIT / - We now have our resource allocation/scheudling and we’re able to transmit data (yay!) <br/><br/>
+
+						between device and tower is “user-plane one way latency”<br/>
+						5ms 4G, so see how RRC slows things down! (must stay in high powered state though)
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step3.png"/>
+					</div>
+				    <aside class="notes">
+				    	CORE NETWORK/ SGW PDNGW - Then go go through the Core Network, through the serving gateway  to the packet data network  gateway  and out to the internet! <br/> 
+						SGW point of interconnect between the radio-side and the EPC. Routes  the incoming and outgoing IP packets<br/><br/>
+						PDNGW point of interconnect between the EPC and the external IP networks. Routes packets to and from the PDNs. Performs various functions such as IP address / IP prefix allocation or policy control and charging<br/><br/>
+						latency varies from carrier to carries
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step5.png"/>
+					</div>
+				    <aside class="notes">
+				    	INTERNET
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step5b.png"/>
+					</div>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step6.png"/>
+					</div>
+				    <aside class="notes">
+				    	CORE NETWORK / PDNGW SGW: We then go back to the PDNGW and then to the SGW<br/>
+						Interesting fact time! All connections are terminated at the PDNGW. What does that mean? Well, a persistent TCP connection could exist between the PDNGW and the external newtork, even if your radio is off!<br/><br/>
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step8.png"/>
+					</div>
+				    <aside class="notes">
+				    	MME - The SGW queries the MME. The MME helps the SGW working out which tower to send the data. This is important as if the user has moved to a different location, the tower which established the connection might not be the right one to send the data back to. Towers are stored in “Tracking Areas”. This is a collection of towers. So, if the device is idle the MME will need to find it so it pages the towers which are in the tracking area, the towers send a broadcast, the device wakes up for a short while, understands that it needs to reconnect  and connects going through the same RRC negotiation.<br/><br/>
+
+						TOWER - the tower that found the user notifies the <br/><br/>
+						MME
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step9.png"/>
+					</div>
+				    <aside class="notes">
+						SGW - which tells the serving gateway, then going back to the
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Making a Request</h2>
+					<img src="pics/step10.png"/>
+					</div>
+				    <aside class="notes">
+				    	TOWER - then to the <br/>
+						DEVICE<br/><br/>
+
+						If the device is not idle this whole paging stuff is skipped. <br/>
+						So first hop is the greatest when it comes to latency! Good to know.<br/><br/>
+
+						-----------<br/><br/>
+
+						RRC: 10 to 100 milliseconds. (4G) HSPA+ state transitions are competitive with LTE. (3G) HSPA and CDMA state transitions can take several seconds. Every network transfer, no matter the size, incurs an energy tail. <br/><br/>
+
+						http://www.3gpp.org/technologies/keywords-acronyms/100-the-evolved-packet-core
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2>Latencies</h2>
+					<img src="pics/latencies.png"/>
+					</div>
+				    <aside class="notes">
+				    	So say the user has their content, radio has been down for a bit so the RRC move into a state where the network context is still established, but no network resources are currently allocated (can be long or short, DRX). <br/><br/>
+
+						If the user sends a new request they hit up a whole load of new latencies:<br/><br/>
+						RRC needs to change to a different state to allow the user to transmit again <br/>
+						- (Control-plane latency: Fixed) up to 100 ms for idle to active, up to 50 ms for dormant to active.<br/> 
+						Latency for each packet to reach the radio tower - or the device in the other direction! <br/>
+						- (User-plane latency: Fixed)  up to 5 ms. <br/>
+						Then whatever happens between the radio tower and the external network through the core network <br/>
+						- (Core network latency: Carrier dependent) in practice, 30–100 ms. <br/>
+						Then from the PDN GW to the Internet <br/>
+						- (Internet routing latency: Variable latency)
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Some Guidelines</h2>
+						<ul id="guidelines">
+						<li class="fragment">send larger data, fewer times</li>
+						<li class="fragment">send data when radio is on</li>
+						<li class="fragment">avoid polling (more later!)</li>
+						<li class="fragment">refrain from keep-alives.</li>
+						<li class="fragment">design for the worst connection</li>
+						<li class="fragment">anticipate latency</li>
+						</ul>
+				    <aside class="notes">
+						- should maximize the amount of transferred data while the radio is on and then seek to minimize the number of additional data transfers.<br/>
+						- interestingly this isn’t the same for wifi, transferring little bites is much better here, but big bursts is good for radio. <br/><br/>
+
+						So, what HTML5 APIs can we use to help us here. There has been a lot of work on this lately, let's go through these here...
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Can HTML5 APIs help?</h2>
+				    <aside class="notes">
+						
+				    </aside>
+				</section>
+
+				<section>
+					<h2 style="text-transform:initial;">navigator.onLine</h2>
 					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+var x = "Is the browser online? " + navigator.onLine;
+document.getElementById("demo").innerHTML = x;
 					</code></pre>
+					<p><small>source: <a href="http://www.w3schools.com/jsref/prop_nav_online.asp">http://www.w3schools.com/jsref/prop_nav_online.asp</a></small></p>
+				    <aside class="notes">
+				    	around 6 years ago navigator.onLine notifications was specced
+				    </aside>
 				</section>
+
+				<section data-state="offline" data-background="pics/offline.jpg" style="width:100%; height:100%">
+				    <aside class="notes">
+				    	 this told the app when a user was online! Fabby! 
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2 style="text-transform:initial;">navigator.onLine</h2>
+					<img src="pics/networkbreak0.png"/>
+					</div>
+				    <aside class="notes">
+				    	But how do we know when we’re online? 
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2 style="text-transform:initial;">navigator.onLine</h2>
+					<img src="pics/networkbreak1.png"/>
+					</div>
+				    <aside class="notes">
+				    	A user could have a connection to their router, but the router could be disconnected from the ISP, or the ISP could be disconnected from the gamefaqs site. 
+				    </aside>
+				</section>
+
+				<section data-transition="none">
+					<div style="margin-top: 50px; padding-top:20px" class="whiteContentBox">
+					<h2 style="text-transform:initial;">navigator.onLine</h2>
+					<img src="pics/networkbreak2.png"/>
+					</div>
+				    <aside class="notes">
+				    	False positives with this API were far far too common (also happens with virtual connections).<br/><br/>
+
+						Say we get around this by querying the server we’re requesting data from, isn’t this just the same than a normal http request?<br/><br/>
+
+						To learn more, see the HTML5 Rocks article, Working Off the Grid.
+				    </aside>
+				</section>		
 
 				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
+					<h2 style="text-transform:initial;">Network Information API</h2>
+					<blockquote cite="http://www.w3.org/TR/2011/WD-netinfo-api-20110607/">Originally: "Exposes the current connection type. The value returned is one of the following strings, case-sensitively: unknown, ethernet, wifi, 2g, 3g, 4g, none."" </blockquote>
+					<p><small>source: <a href="http://www.w3.org/TR/2011/WD-netinfo-api-20110607/">http://www.w3.org/TR/2011/WD-netinfo-api-20110607/</a></small></p>
+				    <aside class="notes">
+				    	So, yeah, earlier we have asked developers to pay attention to the network, so we made this funky net info spec!<br/><br/>
+						What does it do? Well first you could ask it to return the network the user was on, ‘3G’, ‘Wifi” etc. 
+				    </aside>
+				</section>	
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+					<h2>LTE 50-70 Mbps</h2>
+					<p>(comparable to some WiFi networks)</p>
+				    <aside class="notes">
+				    	But this proved less than useful as 4G speeds are about as good at some wifi. 
+				    </aside>
+				</section>		
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<h2 style="text-transform:initial;">Network Information API v2</h2>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						//onchange event
+						navigator.connection.addEventListener('change', show, false);
 
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+						//get bandwidth
+						if (navigator.connection.bandwidth > 2) {
+							i.src = "http://example.com/pony_hd.png";
+						} else {
+							i.src = "http://example.com/pony_ld.png";
+						}
 					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<p><small>source: <a href="http://www.w3.org/TR/netinfo-api/">http://www.w3.org/TR/netinfo-api/</a></small></p>
+				    <aside class="notes">
+				    	So, the network info api evolved to allow the developer to find out what the bandwidth of the user was. Hey awesome!
+				    </aside>
+				</section>
+
+				<section data-state="totrain" data-background="pics/totrain.jpg" style="width:100%; height:100%">
+				<!-- pic: http://www.flickr.com/photos/keatl/468670589/sizes/o/ -->
+					<div class="flip-container fragment" id="mario5" style="bottom:0px;left:0px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario6" style="bottom:0px;right:0px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/smashright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+				    <aside class="notes">
+				    	Well, not really. Say we start off at the office, we start working with a web app and it tests our connection bandwidth to see what it can send. Then we move, we go down the street, and onto the tube. All the while our app expects some super fast connection and then fails. Err… crappy experience.<br/><br/>
+
+						On top moving between different coverage areas of the radio tower, congestion from nearby users, ambient interference etc also makes a difference!
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+					<h3>"change is the only constant in mobile networks"</h3>
+				    <aside class="notes">
+				    	so, I like what Ilya says about this topic “change is the only constant in mobile networks”<br/><br/>
+
+						So this is why the guidelines say to design web apps for the cruddiest connection
+						<br/><br/>
+						“as even on 4G, you may measure your throughput as just a few hundred Kbit/s, and then move your radio a few inches and get Mbit/s+ performance!”
+						<br/><br/>
+						So bandwidth and latency estimation is a tricky business, and maybe even a uncessary evil (the worst kind of evil!). TAKE WHAT YOU KNOW ABOUT MOBILE NEWTORKS AND APPLY IT TO YOUR WEB APPS.
+				    </aside>
+				</section>
+
+				<section data-state="netinfo1" data-background="pics/netinfo1.png" style="width:100%; height:100%">
+				    <aside class="notes">
+				    	Ok so there are some problems with the net info api, but there does seem to be a good use case for it still.<br/><br/>
+				    </aside>
+				</section>
+
+				<section data-state="netinfo2" data-background="pics/netinfo2.png" style="width:100%; height:100%">
+				    <aside class="notes">
+				    	in the ‘closing the gap with native’ focus that is driving some of the web standards right now, we noticed a massive gap between native and web when it came to ‘downloading over a wifi network vs a mobile network’ for content.<br/><br/>
+
+						Yes, as 4G gets rolled out the difference in performance will be negligable. But, your mobile network may charge you for data, and your mobile network isn’t as reliable at holding a consistenly high connection, so you might not even want something like a movie downloading over this medium. On top of all of this the radio on your mobile drains battery only second to the screen. You may not want such a high bettery consumption activity happening on your phone. 
+				    </aside>
+				</section>
+
+				<section data-state="netinfo3" data-background="pics/netinfo3.png" style="width:100%; height:100%">
+				    <aside class="notes">
+				    	spec work is now happening on this, which will hopefully make a much more robust solution based on much stronger use cases.
+				    </aside>
 				</section>
 
 				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+					<h2>Minimise Polling</h2>
+					<p>But I can't use push...</p>
+				    <aside class="notes">
+				    	so our guidelines also said we should minimise polling which is a shame because polling is a great way to get around the push notification issue for web (or lack of one!).<br/><br/>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
+						But even tiny requests are a big drain on a device’s battery, as every request, however small, will push the device into a connected state if it isn’t already in one. So the guidelines say no polling and pull all your data into fewer, larger requests, and non-critical ones should just wait. 
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+				<div style="padding-top:20px" class="whiteContentBox">
+					<h3 style="text-transform:initial;">Server-Sent Events</h3>
+					<img src="pics/pushsse.png"/>
+					<h3 style="text-transform:initial;">Push API</h3>
+					<img src="pics/pushapi.png"/>
+					</div>
+					<p><small>source: <a href="http://www.w3.org/Mobile/mobile-web-app-state/">http://www.w3.org/Mobile/mobile-web-app-state/</a></small></p>
+				    <aside class="notes">
+				    	With new APIs however we can get around the push API issue with an actual push API! <br/>
+				    	Two HTML5 APIs exist which deal with push messaging: push and server sent events. you can see here the implementation is a little different right now. 
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<div style="padding:20px 0; margin-top:30px;" class="whiteContentBox">
+					<h2 style="text-transform:initial;">Server-Sent Events</h2>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						// Connect to server, listen for messages, manage data:
+						var source = new EventSource('/stats');
+						source.onopen = function () {
+						  connectionOpen(true);
+						};
+
+						source.onerror = function () {
+						  connectionOpen(false);
+						};
+
+						source.addEventListener('connections', updateConnections,false);
+						source.addEventListener('requests', updateRequests, false);
+						source.addEventListener('uptime', updateUptime, false);
+
+						source.onmessage = function (event) {
+						  // a message without a type was fired
+						};
+					</code></pre>
+					</div>
+					<p><small>source: <a href="http://html5doctor.com/server-sent-events/">http://html5doctor.com/server-sent-events/</a></small></p>
+				    <aside class="notes">
+				    	The Server-Sent Events API allows triggering DOM events based on push notifications (via HTTP and other protocols.). This is great for news feeds or a twitter streaming app.<br/><br/>
+
+						The main points of interest:<br/>
+
+						new EventSource(url) — immediately starts listening for events on the given URL.
+						readyState — tells us if we’re connecting (0), open (1), or closed (2).
+						onopen, onmessage — two events that we can listen for on the new EventSource object. By default, the message event will fire when new messages are received.
+						addEventListener — we can also listen for custom messages.
+						event.data — the contents of the message (string)
+						close — closes the connection from the client side.
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
+				<div style="padding:20px 0px; margin-top:30px;" class="whiteContentBox">
+					<h2 style="text-transform:initial;">Push API</h2>
+					<p>(W3C Working Draft)</p>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						//register
+						function registerPush() {
+						  navigator.push.register().then(
+						    function(value) {
+						      pushRegistrations.push(value);
+						      registerWithAppServer(value);
+						    },
+						    function(reason) {alert("error: "+ reason);}  
+						  );
+						}
+						//handler
+						navigator.setMessageHandler("push", gotPush);
+						//manage the message
+						function gotPush(message) {
+						  //do stuff
+						}
+					</code></pre>
+					</div>
+					<p><small>source: <a href="http://www.w3.org/TR/push-api/">http://www.w3.org/TR/push-api/</a></small></p>
+				    <aside class="notes">
+				    	The Push API was a little further behind development as it was locked behind a patent row!<br/>
+						The Push API would allow Web applications to receive server-sent messages whether or not the said Web app is active in a browser window. It’s only in working draft right now.
+				    </aside>
 				</section>
 
 				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+					<h2 style="margin-top:25%">Offline</h2>
+					<p>Native App Win?</p>
+					<img style="float:right; margin:-20px 70px 0 0;" src="pics/angryleft.png">
+				    <aside class="notes">
+				    	- Even after all these guidelines, hints and tips, native apps still have some performance gains in times of intermittent or no connection (as the shell of their app is cached as well as the last pulled down content)<br/>
+
+						- Some people find that as mobile networks get faster (LTE) that maybe offline isn’t as necessary, but the issues with switching between base station tracking areas and going off-net and on-net (stupid mobile network term) means the user experience isn’t always consistent.
+				    </aside>
+				</section>
+
+				<section>
+				<div style="padding:20px 0px; margin-top:30px;" class="whiteContentBox">
+					<h2 style="text-transform:initial;">App Cache</h2>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						//register
+						CACHE MANIFEST
+						# 2013-10-22:v1
+
+						# Explicitly cached 
+						CACHE:   
+						/offlineanime/anime.json   
+						/offlineanime/app/css/app.css
+						/offlineanime/app/img/404.png   
+						/offlineanime/app/lib/angular/angular.js   
+						/offlineanime/app/lib/angular/angular-route.js       
+						/offlineanime/app/js/controllers.js    
+						/offlineanime/app/js/app.js
+						/offlineanime/app/partials/anime-list.html
+						/offlineanime/app/partials/anime-detail.html 
+
+						# Resources that require the user to be online. 
+						NETWORK:
+						# Don't actually need other URLs because * covers them       
+						# Needed * for ajax requests
+						*
+
+						FALLBACK:
+						http://static.hummingbird.me /offlineanime/app/img/404.png #doesn't work!
+					</code></pre>
+					</div>
+				    <aside class="notes">
+				    	So in an effort to solve the offline issue the App cache was created. Working with a few other offline-capable APIs a developer could create a shiney offline-capable app. And it was easy! just a nice declarative app.appcahe file. Alas…<br/>
+
+						- issues<br/>
+						- Jake "comes with a manual"<br/>
+
+						Trying not to be too swayed by what I had read I actually tried to build an offline app with app cache too. My app was built on angular, using XHR requests, using images from others domains, storing content via json in localstorage (to string).<br/>
+
+						I built the app, it worked. then I had to make the app cache. I dreaded it. I was sick to my stomach but I knew I had to do it. So i wrote an app cache with a few urls and then these were my nightmares:
+				    </aside>
+				</section>
+
+				<section data-state="konatapage" data-background="pics/konatapage.png">
+					<h2 style="text-transform:initial;color:#d60505;font-family: 'Nosifer', cursive;text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.8);line-height:1.1em; font-size:1.5em">App Cache NIGHTMARES</h2>
+					<ul id="nightmares">
+						<li>AppCache wasn't loading<br/>
+						<small>(Solved by editing http.conf)</small></li>
+						<li>EVERYTHING BROKE!<br/>
+						<small>(Solved by declaring everything)</small></li>
+						<li>XHR requests stopped working<br/>
+						<small>(Solved by adding * to Network in Appcache file for some weird reason)</small></li>
+						<li>Nasty image placeholders when offline<br/>
+						<small>(Solved by nasty image error hack)</small></li>
+						<li>Debugging became an difficult<br/>
+						<small>(Solved only by more beer.)</small></li>
 					</ul>
+				    <aside class="notes">
+				    	but there were some things i liked, it was delcarative, worked great with localstorage (or localstaorage was great).<br/><br/>				    	
+						But these issues just couldn’t be ignored. so do we just kill this whole offline thing? or look for a better way?
+				    </aside>
 				</section>
 
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h2>Service Worker!</h2>
+				    <aside class="notes">
+						- apps rather than pages<br/>	
+						- Power to the developer, but also puts responsibility on developers on what/how/when stuff gets cached. [I LIKE THIS]<br/>	<br/>	
+				    </aside>
+				</section>
+
+				<section data-state="sw" data-background="pics/sw.png">
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<div style="padding:20px 0px;" class="whiteContentBox">
+					<h3>Service Worker Can:</h3>
+					<ul>
+						<li class="fragment">manage caches</li>
+						<li class="fragment">listen for network events (e.g. resource requests)</li>
+						<li class="fragment">decide what content to display</li>
+					</ul>
+					</div>
+				    <aside class="notes">
+				    	- service worker will:<br/>	
+						manage caches<br/>	
+						listen for events eg resource requests<br/>	
+						decide what content to display<br/>	<br/>
+
+						you can have...
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Multiple Caches</h2>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Cache Info</h2>
+					<p>(What is cached? How hold are they? Is an update available?)</p>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Multiple Fallbacks</h2>
+					<p>(Based on Promises)</p>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+				<div style="padding:20px 0px; margin-top:30px;" class="whiteContentBox">
+					<h3 style="text-transform:initial;">ServiceWorker: Caching</h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						this.addEventListener("install", function(e) {
+						//Create a cache of resources. Begins the process of fetching them.
+						  var shellResources = new Cache(
+						  "/app.html",
+						  "/assets/v1/base.css",
+						  "/assets/v1/app.js",
+						  "/assets/v1/logo.png",
+						  "/assets/v1/intro_video.webm",
+						  );
+
+						  //Add Cache to the global so it can be used later during onfetch
+						  caches.set("shell-v1", shellResources);
+
+						  //The coast is only clear when all the resources are ready.
+						  e.waitUntil(shellResources.ready());
+						});
+
+						this.addEventListener("fetch", function(e) {
+						  //No "onfetch" events are dispatched to the ServiceWorker 
+						  //until it successfully installs.
+
+						  //All operations on caches are async, including matching URLs, so we use
+						  //Promises heavily. e.respondWith() even takes Promises to enable this:
+						  e.respondWith(caches.match(e.request.url, "shell-v1"));
+						});
+					</code></pre>
+					</div>
+					<p><small>source: <a href="https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md">https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md</a></small></p>
+				    <aside class="notes">
+						Go read the explainer document! Here i want to jump straight over SW’s registration and into the caching (my fav part)!<br/>
+						caching.js<br/><br/>
+
+						Each ServiceWorker has a global caches Map which holds instances of Cache. <br/>
+						CACHE: Promises which represent responses which may or may not yet be available from the network.  <br/>
+						CACHE MAP: contains list of desired cached urls, and these all now have promises attached <br/>
+						new caches will need to be loaded 100% before they take over
+				    </aside>
+				</section>
+
+				<section>
+				<div style="padding:20px 0px; margin-top:30px;" class="whiteContentBox">
+					<h3 style="text-transform:initial;">ServiceWorker: Fallbacks</h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						this.addEventListener("fetch", function(e) {
+						  var url = e.request.url;
+						  if (url == inventory) {
+						    e.respondWith(
+						      fetch(url).then(
+						        null,
+						        function() { return caches.match(fallbackInventory); }
+						      )
+						    );
+						  }
+						});
+					</code></pre>
+					</div>
+					<p><small>source: <a href="https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md">https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md</a></small></p>
+				    <aside class="notes">
+				    	- get a promise from fetch<br/>
+						- If it resolves successfully (that is, gets what it wanted from the network), that's the value passed to the page. Simple.<br/>
+						- If not, the .then() function adds a callback to handle the error which, in this case, returns some default content. We don't need a callback for the success case here, so that's just specified as null.<br/>
+						- You can have many fallbacks!
+				    </aside>
+				</section>
+
+				<section>
+					<h2 style="text-transform:initial;">ServiceWorker: Rules</h2>
+						<p>(just a few)</p>
+				    <aside class="notes">
+				    	new service worker only happens when old one dies and all tabs are closed<br/>
+						fallback to normal resource loading in all instances<br/>
+						iframes not ok<br/>
+						multiple tabs ok<br/>
+						wildcards are ok - longest prefix match too<br/>
+						last reg wins<br/>
+						iframe belongs to its own serviceworker (CORs)<br/>
+						SW don’t hold state<br/>
+				    </aside>
+				</section>
+
+
+				<section>
+					<div style="padding:20px 0px; margin-top:30px;" class="whiteContentBox">
+						<h2>So, Mobile Network?</h2>
+						<ul>
+							<li class="fragment">understand the mobile network</li>
+							<li class="fragment">latencies</li>
+							<li class="fragment">some guidelines</li>
+							<li class="fragment">design for the worst connection</li>
+							<li class="fragment">use push instead of polling</li>
+							<li class="fragment">bigger bursts</li>
+							<li class="fragment">HTML5 APIs including offline</li>
+						</ul>
+					</div>
+				    <aside class="notes">
+						Ah yes that’s what we were talking about. So, let’s go through what we learned:
+						<br/><br/>
+				    </aside>
+				</section>
+
+				<section data-state="4pics" data-background="pics/4pics.jpg" style="width:100%; height:100%">
+					<div class="flip-container fragment" id="mario7" style="top:20px;left:0px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario8" style="top:-20px;right:0px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneright.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneleft.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario9" style="bottom:-20px;left:-20px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneleft.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneright.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+					<div class="flip-container fragment" id="mario10" style="bottom:0px;right:150px">
+						<div class="flipper">
+							<div class="front" style="background: url(pics/lookphoneright.png) bottom center no-repeat;"></div>
+							<div class="back" style="background: url(pics/phoneleft.png) bottom center no-repeat;"></div>
+						</div>
+					</div>
+				    <aside class="notes">
+				    </aside>
+				</section>
+
+				<section>
+					<h2>Thank-you</h2>
+					<p><small>Especially:<br/>
+					Ilya Grigorik (<a href="https://twitter.com/igrigorik">@igrigorik</a>), Jake Archibald (<a href="https://twitter.com/jaffathecake">@jaffathecake</a>), Alex Russell (<a href="https://twitter.com/slightlylate">@slightlylate</a>),<br/>GSMA Intelligence, W3C WebApps, SysApps, DeviceApps WGs, W3C Webmob IG<br/>
+					Read Ilya's Book! "<a href="http://chimera.labs.oreilly.com/books/1230000000545">High Performance Browser Networking</a>"</small></p>
+				    <aside class="notes">
+				    </aside>
 				</section>
 
 			</div>
 
 		</div>
+
+
+		<footer>
+			@thisNatasha - <span id="topic">Introduction</span>
+		</footer>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
@@ -363,9 +971,12 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+				slideNumber: true,
+				width: 960,
+    			height: 700,
+				//transition: 'fade',
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				//theme: 'Reveal.getQueryHash().theme', // available themes are in /css/theme
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
@@ -381,6 +992,52 @@ function linkify( selector ) {
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+
+			// function flip(amario){
+			// 	console.log('mario = ' + amario);
+			// 	amario = '#' + amario;
+			// 	document.querySelector(amario).classList.toggle("flip")
+			// }
+
+			//flip mario
+			Reveal.addEventListener( 'fragmentshown', function( event ) {
+			    var amario = event.fragment.id;
+			    amario = '#' + amario;
+
+			    setTimeout(function(){
+			    	document.querySelector(amario).classList.toggle("flip");
+			    },500);
+			} );
+
+			//slide change
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    var topic = document.getElementById('topic');
+
+			    switch (event.indexh)
+				{
+				case 7:
+				  	topic.innerHTML = 'Mobile Network';
+				  	break;
+				case 30:
+				  	topic.innerHTML = 'HTML5 APIs';
+				  	break;
+				case 31:
+				  	topic.innerHTML = 'navigator.onLine';
+				  	break;
+				case 36:
+				  	topic.innerHTML = 'Network Information API';
+				  	break;
+				case 44:
+				  	topic.innerHTML = 'Polling';
+				  	break;
+				case 48:
+				  	topic.innerHTML = 'Offline';
+				  	break;
+				case 60:
+				  	topic.innerHTML = 'Wrap-up & Thanks';
+				  	break;
+				}
+			} );
 
 		</script>
 
