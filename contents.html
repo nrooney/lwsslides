@@ -1,0 +1,68 @@
+<html>
+<head>
+
+<style type="text/css">
+	div.container {
+		height: 100px;
+		overflow: hidden;
+		background: #ccc;
+		width: 200px;
+	}
+
+	ul {
+		margin: 0px;
+		padding: 0px;
+		width: inherit;
+	}
+
+	ul li{
+		width: inherit;
+		padding: 5px 10px;
+		height: auto;
+		list-style-type: none;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-size: 15px;
+		color: #000; }
+	}
+
+	li.now{
+		color: #fff;
+	}
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		<ul id="myContents">
+			<li>who cares?</li>
+			<li>mobile networks</li>
+			<li>guidelines</li>
+			<li>navigator.online</li>
+			<li>network info API</li>
+			<li>polling and push</li>
+			<li>offline</li>
+			<li>so...</li>
+			<li>thanks</li>
+		</ul>
+	</div>
+
+	<script>
+
+		// Function to change the content of t2
+		function scrollContents(num) {
+			//document.querySelector("#myContents li").classList.toggle("now"); need to work on this.
+
+			var pixelMargin = 0 - document.querySelector("#myContents li").clientHeight;
+			pixelMargin = num * pixelMargin;
+			console.log(pixelMargin.toString() + 'px' + " " + num);
+			document.querySelector("#myContents").style.marginTop = pixelMargin.toString() + 'px';
+		}
+
+		// add event listeners
+		var el = document.querySelector("#myContents");
+		var num = 0;
+		el.addEventListener("click", function(){num = num + 1; scrollContents(num)}, false);
+
+	</script
+</body>
+</html>
